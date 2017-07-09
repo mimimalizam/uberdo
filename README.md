@@ -55,3 +55,20 @@ for x,y := range Foo
 # Special functions
 
 - `init()` - runs before `main()`.
+
+# Errors
+
+```
+# cmd/root.go
+
+func Execute() {
+  err := RootCmd.Execute()
+  if err != nil {
+    fmt.Println(err)
+    os.Exit(-1)
+  }
+}
+```
+
+There are no exceptions in Go, errors seem to be just values which are being handled
+when they occur.
