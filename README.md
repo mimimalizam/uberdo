@@ -51,3 +51,7 @@ for x,y := range Foo
 ```
 
 ~ `each`, `x` is index/key, `y` is value. `_` allows ignoring naming variables.
+
+# Special functions
+
+- `init()` - runs before `main()`.

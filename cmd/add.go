@@ -27,6 +27,10 @@ var addCmd = &cobra.Command{
 	Run: addRun,
 }
 
+func init() {
+    RootCmd.AddCommand(addCmd)
+}
+
 func addRun(cmd *cobra.Command, args []string){
 
   for _, x := range args {
