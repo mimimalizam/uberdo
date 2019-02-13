@@ -39,7 +39,7 @@ func addRun(cmd *cobra.Command, args []string) {
 	for _, x := range args {
 		items = append(items, todo.Item{Text: x})
 	}
-	fmt.Println(items)
+	fmt.Printf("%#v\n", items)
 }
 
 func init() {
