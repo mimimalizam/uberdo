@@ -34,12 +34,15 @@ func init() {
 
 // https://gobyexample.com/slices
 func addRun(cmd *cobra.Command, args []string) {
-	items := []todo.Item{}
+	var items = []todo.Item{}
 
 	for _, x := range args {
 		items = append(items, todo.Item{Text: x})
 	}
-	fmt.Printf("%#v\n", items)
+	err := todo.SaveItems(".uberdo.json", items)
+	if err != nil {
+		fmt.Errorf("%v", err)
+	}
 }
 
 func init() {
