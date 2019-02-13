@@ -34,11 +34,12 @@ func init() {
 
 // https://gobyexample.com/slices
 func addRun(cmd *cobra.Command, args []string) {
+	items := []todo.Item{}
 
 	for _, x := range args {
-		fmt.Println(x)
+		items = append(items, todo.Item{Text: x})
 	}
-
+	fmt.Println(items)
 }
 
 func init() {
