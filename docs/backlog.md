@@ -64,6 +64,8 @@ for x,y := range Foo
 # Misc
 
 - `:=` - assignement operator; declares & assigns in one operation
+- Capital letter means that type, method or function is available to `other` packages (example `todo/todo.go`).
+Lower case means only available to `this` package.
 
 # Errors
 
