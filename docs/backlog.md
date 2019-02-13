@@ -61,6 +61,10 @@ for x,y := range Foo
 
 - `init()` - runs before `main()`.
 
+# Misc
+
+- `:=` - assignement operator; declares & assigns in one operation
+
 # Errors
 
 ```
@@ -77,4 +81,3 @@ func Execute() {
 
 There are no exceptions in Go, errors seem to be just values which are being handled
 when they occur.
-
